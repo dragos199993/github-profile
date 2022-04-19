@@ -1,0 +1,23 @@
+query GetProfile {
+  search(query: "gaearon", type: USER, first: 1) {
+    edges {
+      node {
+        ... on User {
+          name
+          login
+          bio
+          avatarUrl
+          company
+          followers {
+            totalCount
+          }
+          following {
+            totalCount
+          }
+          email
+          twitterUsername
+        }
+      }
+    }
+  }
+}
