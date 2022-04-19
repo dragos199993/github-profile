@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './config/apollo'
-import { App } from './components/App'
+import { App } from './App'
 import './index.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useGetProfileQuery, User } from '../generated/graphql'
-import { Avatar } from './profile/Avatar'
+import { useGetProfileQuery, User } from './generated/graphql'
+import { Avatar } from './components/Avatar'
 import styled from 'styled-components'
-import { Name } from './profile/Name'
-import { Username } from './profile/Username'
-import { FollowButton } from './profile/FollowButton'
-import { Stats } from './profile/Stats'
-import { Contact } from './profile/Contact'
+import { Name } from './components/Name'
+import { Username } from './components/Username'
+import { FollowButton } from './components/FollowButton'
+import { Stats } from './components/Stats'
+import { Contact } from './components/Contact'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
   padding: 20px;
   border-radius: 10px;
   margin: 200px auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border: 1px solid #e6e6e6;
 `
 

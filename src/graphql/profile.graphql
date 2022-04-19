@@ -8,6 +8,9 @@ query GetProfile {
           bio
           avatarUrl
           company
+          starredRepositories {
+            totalCount
+          }
           followers {
             totalCount
           }

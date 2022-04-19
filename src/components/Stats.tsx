@@ -4,11 +4,11 @@ import {
   FollowerConnection,
   FollowingConnection,
   StarredRepositoryConnection,
-} from '../../generated/graphql'
+} from '../generated/graphql'
 import styled from 'styled-components'
 import { Follower } from './Follower'
 import { Following } from './Following'
-import { NumberServices } from '../../services/NumberServices'
+import { NumberServices } from '../services/NumberServices'
 
 const StatsWrapper = styled.div`
   display: flex;
@@ -39,8 +39,7 @@ export const Stats: FC<StatsProps> = ({ following, followers, stars }) => {
       <span>·</span>
       <Follower>
         <FontAwesomeIcon icon="star" />{' '}
-        <span>{NumberServices.abbreviateNumber(followers.totalCount)}</span>{' '}
-        stars
+        <span>{NumberServices.abbreviateNumber(stars.totalCount)}</span> stars
       </Follower>
     </StatsWrapper>
   )

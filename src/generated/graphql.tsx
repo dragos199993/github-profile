@@ -23673,10 +23673,11 @@ export type GetProfileQuery = {
             company?: string | null
             email: string
             twitterUsername?: string | null
-            followers: {
-              __typename?: 'FollowerConnection'
+            starredRepositories: {
+              __typename?: 'StarredRepositoryConnection'
               totalCount: number
             }
+            followers: { __typename?: 'FollowerConnection'; totalCount: number }
             following: {
               __typename?: 'FollowingConnection'
               totalCount: number
@@ -23698,6 +23699,9 @@ export const GetProfileDocument = gql`
             bio
             avatarUrl
             company
+            starredRepositories {
+              totalCount
+            }
             followers {
               totalCount
             }
